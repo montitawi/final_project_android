@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BinGo</string>
+    <string name="facebook_app_id">298646280626033</string>
+    <string name="fb_login_protocol_scheme">fb298646280626033</string>
+</resources>
