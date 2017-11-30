@@ -181,6 +181,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:background="#003d33"
+        android:textColor="#FFFFFF"
         android:text="Start" />
 
     <TextView
