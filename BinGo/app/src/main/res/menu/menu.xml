@@ -6,5 +6,11 @@
         app:showAsAction="always"
         android:icon="@drawable/ic_share_black_24dp"/>
 
+    <item
+        android:id="@+id/btnLogout"
+        android:icon="@drawable/ic_people_black_24dp"
+        android:title="Logout"
+        app:showAsAction="always" />
+
 
 </menu>

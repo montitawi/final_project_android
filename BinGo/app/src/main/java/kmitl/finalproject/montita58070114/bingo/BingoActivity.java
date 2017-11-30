@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.facebook.login.LoginManager;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,20 +26,19 @@ public class BingoActivity extends AppCompatActivity {
     private TextView title, round, state, allRand;
     private HashMap<TextView, BlockNumber> blockViewMaps = new HashMap<>();
     private Button controlButton;
-
     private IGame gameManager;
+    View rootView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bingo);
 
-
-        this.title = (TextView) findViewById(R.id.title);
-        this.round = (TextView) findViewById(R.id.roundTextView);
-        this.state = (TextView) findViewById(R.id.stateTextView);
-        this.allRand = (TextView) findViewById(R.id.allRand);
-        this.controlButton = (Button) findViewById(R.id.controlBtn);
+        this.title = findViewById(R.id.title);
+        this.round = findViewById(R.id.roundTextView);
+        this.state = findViewById(R.id.stateTextView);
+        this.allRand = findViewById(R.id.allRand);
+        this.controlButton = findViewById(R.id.controlBtn);
 
         mapBlockViews();
 
@@ -48,6 +49,7 @@ public class BingoActivity extends AppCompatActivity {
                 handleControl();
             }
         });
+        rootView = getWindow().getDecorView().findViewById(android.R.id.content);
 
         updateViews();
     }
@@ -232,17 +234,24 @@ public class BingoActivity extends AppCompatActivity {
             }
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.share, menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.btnShare:
-                //onShareScreenshot();
+                onShareScreenshot(rootView);
                 return true;
+            case R.id.btnLogout:
+                LoginManager.getInstance().logOut();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                finish();
             default:
                 return false;
         }
