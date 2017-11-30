@@ -21,11 +21,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import kmitl.finalproject.montita58070114.bingo.Game.BlockNumber;
-import kmitl.finalproject.montita58070114.bingo.Game.BlockState;
-import kmitl.finalproject.montita58070114.bingo.Game.Game;
-import kmitl.finalproject.montita58070114.bingo.Game.GameState;
-import kmitl.finalproject.montita58070114.bingo.Game.IGame;
+import kmitl.finalproject.montita58070114.bingo.BingoGame.BlockNumber;
+import kmitl.finalproject.montita58070114.bingo.BingoGame.BlockState;
+import kmitl.finalproject.montita58070114.bingo.BingoGame.Game;
+import kmitl.finalproject.montita58070114.bingo.BingoGame.GameState;
+import kmitl.finalproject.montita58070114.bingo.BingoGame.IGame;
 import kmitl.finalproject.montita58070114.bingo.ScreenShot.ScreenShot;
 
 public class BingoActivity extends AppCompatActivity {

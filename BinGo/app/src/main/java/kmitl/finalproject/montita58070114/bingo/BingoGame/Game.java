@@ -1,4 +1,4 @@
-package kmitl.finalproject.montita58070114.bingo.Game;
+package kmitl.finalproject.montita58070114.bingo.BingoGame;
 
 import java.util.ArrayList;
 import java.util.Random;
