@@ -21,6 +21,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import kmitl.finalproject.montita58070114.bingo.Game.BlockNumber;
+import kmitl.finalproject.montita58070114.bingo.Game.BlockState;
+import kmitl.finalproject.montita58070114.bingo.Game.Game;
+import kmitl.finalproject.montita58070114.bingo.Game.GameState;
+import kmitl.finalproject.montita58070114.bingo.Game.IGame;
+import kmitl.finalproject.montita58070114.bingo.ScreenShot.ScreenShot;
+
 public class BingoActivity extends AppCompatActivity {
 
     private TextView title, round, state, allRand;

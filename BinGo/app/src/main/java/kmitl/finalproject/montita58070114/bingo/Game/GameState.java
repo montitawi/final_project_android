@@ -1,4 +1,4 @@
-package kmitl.finalproject.montita58070114.bingo;
+package kmitl.finalproject.montita58070114.bingo.Game;
 
 public enum GameState {
     WIN,
