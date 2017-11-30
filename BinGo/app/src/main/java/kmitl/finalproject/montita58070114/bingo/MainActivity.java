@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         callbackManager = CallbackManager.Factory.create();
         btnLogin = findViewById(R.id.btnLogin);
+        getSupportActionBar().hide();
 
         btnLogin.setReadPermissions(Arrays.asList("user_photos", "email", "public_profile"));
 
@@ -31,28 +32,6 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(LoginResult loginResult) {
                 Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
                 goBingoGame();
-
-
-//                Bundle parameters = new Bundle();
-//                parameters.putString("fields", "id,name,last_name,link,email,picture");
-//                GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
-//                    @Override
-//                    public void onCompleted(JSONObject jsonObject, GraphResponse graphResponse) {
-//                        try {
-//                            String str_email = jsonObject.getString("email");
-//                            Toast.makeText(MainActivity.this, str_email, Toast.LENGTH_LONG).show();
-//
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
-//                        Log.i("user", jsonObject.toString());
-//
-//
-//                    }
-//                });
-//                request.setParameters(parameters);
-//                request.executeAsync();
-
 
             }
 
